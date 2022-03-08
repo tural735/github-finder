@@ -11,9 +11,7 @@ function NotFound() {
                 </h1>
                 <p className="text-5xl mb-8">404 Page not found!</p>
                 <Link to="/" className='btn btn-primary btn-lg '>
-                <FaHome className="mr-2"/>Back To Home 
-                {/* token */}
-                {/* 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 */}
+                <FaHome className="mr-2"/>Back To Home
                 </Link>
             </div>
         </div>
