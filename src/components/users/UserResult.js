@@ -1,14 +1,11 @@
-import React, { useLayoutEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import GithubContext from '../../context/github/GithubContext';
 import Spinner from '../layout/Spinner';
 import UserItem from './UserItem';
 
 function UserResult() {
-    const {users,loading,fetchUsers}=useContext(GithubContext);
+    const {users,loading}=useContext(GithubContext);
     // const [loading,setLoading]=useState(true);
-    useLayoutEffect(()=>{
-        fetchUsers();
-    },)
 
     if(!loading){
         return (
