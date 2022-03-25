@@ -1,4 +1,4 @@
-import React,{useContext,useEffect} from 'react';
+import React,{useContext,useLayoutEffect} from 'react';
 import {FaStore,FaUserFriends,FaUsers,FaCodepen} from 'react-icons/fa'
 import { Link, useParams } from 'react-router-dom';
 import GithubContext from '../context/github/GithubContext';
@@ -10,7 +10,7 @@ function User() {
  
   const params = useParams()
  
-  useEffect(() => {
+  useLayoutEffect(() => {
     dispatch({type:"SET_LOADING"})
     const getUserData= async()=>{
       const userData=await getUserAndRepos(params.login)
